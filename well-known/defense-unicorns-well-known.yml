@@ -1,0 +1,19 @@
+generated: '2026-07-18'
+method: searched
+host: https://www.defenseunicorns.com
+notes: >-
+  Probed the corporate host's /.well-known/ discovery surface. Defense Unicorns
+  publishes no well-known discovery documents (no security.txt, OIDC, OAuth AS,
+  api-catalog, or ai-plugin). Requests redirect to the apex and resolve to 404.
+  Absence recorded as valid data.
+documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404

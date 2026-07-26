@@ -1,0 +1,72 @@
+generated: '2026-07-18'
+method: searched
+source: npm, Homebrew tap (github.com/defenseunicorns/homebrew-tap), pkg.go.dev, github.com/defenseunicorns
+notes: >-
+  Defense Unicorns ships DevSecOps tooling as CLIs and libraries rather than a
+  hosted REST API/SDK. First-party distributables are catalogued below. Binaries
+  (uds, lula, maru2) are the CLI surface — see cli/defense-unicorns-cli.yml.
+packages:
+  - language: javascript
+    registry: npm
+    name: pepr
+    url: https://www.npmjs.com/package/pepr
+    install: npm install pepr
+    repository: https://github.com/defenseunicorns/pepr
+    description: Type-safe Kubernetes middleware / application engine.
+    official: true
+  - language: javascript
+    registry: npm
+    name: kubernetes-fluent-client
+    url: https://www.npmjs.com/package/kubernetes-fluent-client
+    install: npm install kubernetes-fluent-client
+    repository: https://github.com/defenseunicorns/kubernetes-fluent-client
+    description: A @kubernetes/client-node fluent API wrapper leveraging Server-Side Apply.
+    official: true
+  - language: go
+    registry: pkg.go.dev
+    name: github.com/defenseunicorns/uds-cli
+    url: https://pkg.go.dev/github.com/defenseunicorns/uds-cli
+    install: go install github.com/defenseunicorns/uds-cli@latest
+    repository: https://github.com/defenseunicorns/uds-cli
+    description: UDS CLI — create and deploy UDS Bundles (wraps Zarf).
+    official: true
+  - language: go
+    registry: pkg.go.dev
+    name: github.com/defenseunicorns/maru-runner
+    url: https://pkg.go.dev/github.com/defenseunicorns/maru-runner
+    install: go install github.com/defenseunicorns/maru-runner@latest
+    repository: https://github.com/defenseunicorns/maru-runner
+    description: Maru — the Unicorn task runner.
+    official: true
+  - language: shell
+    registry: homebrew
+    name: uds
+    url: https://github.com/defenseunicorns/homebrew-tap
+    install: brew install defenseunicorns/tap/uds
+    repository: https://github.com/defenseunicorns/uds-cli
+    description: UDS CLI via the Defense Unicorns Homebrew tap.
+    official: true
+  - language: shell
+    registry: homebrew
+    name: lula
+    url: https://github.com/defenseunicorns/homebrew-tap
+    install: brew install defenseunicorns/tap/lula
+    repository: https://github.com/defenseunicorns/lula
+    description: Lula — compliance-as-code (OSCAL) engine.
+    official: true
+  - language: shell
+    registry: homebrew
+    name: maru2
+    url: https://github.com/defenseunicorns/homebrew-tap
+    install: brew install defenseunicorns/tap/maru2
+    repository: https://github.com/defenseunicorns/maru2
+    description: Maru2 task runner.
+    official: true
+  - language: yaml
+    registry: github-actions
+    name: defenseunicorns/setup-uds
+    url: https://github.com/defenseunicorns/setup-uds
+    install: "uses: defenseunicorns/setup-uds@v1"
+    repository: https://github.com/defenseunicorns/setup-uds
+    description: GitHub Action to install and configure the UDS CLI.
+    official: true

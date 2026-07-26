@@ -1,0 +1,32 @@
+# UDS Documentation
+
+> UDS (Unified Defense Stack) is a secure-by-default Kubernetes platform built on top of Zarf. It packages and operates production applications on air-gapped and internet-connected clusters.
+
+## Products
+
+- **Core**: The platform layer deployed onto a Kubernetes cluster. Bundles Istio (service mesh and ingress), Keycloak (identity and SSO), Authservice (SSO proxy for apps without native OIDC), Prometheus + Grafana + Alertmanager (monitoring), Vector + Loki (logging), Falco (runtime security), and Pepr (policy engine and operator framework). Exposes UDS Package, UDS Exemption, and UDS ClusterConfig CRDs for application and platform integration.
+- **CLI**: The command-line tool for creating and deploying UDS Bundles. Wraps Zarf to add multi-package bundles (`uds-bundle.yaml`), a task runner (`uds run`), and cluster monitoring.
+
+## Documentation Sets
+
+- [Abridged documentation](https://docs.defenseunicorns.com/llms-small.txt): a compact version of the documentation for UDS Documentation, with non-essential content removed
+- [Complete documentation](https://docs.defenseunicorns.com/llms-full.txt): the full documentation for UDS Documentation
+- [Core > Getting Started](https://docs.defenseunicorns.com/_llms-txt/core--getting-started.txt)
+- [Core > Concepts](https://docs.defenseunicorns.com/_llms-txt/core--concepts.txt)
+- [Core > How-to Guides](https://docs.defenseunicorns.com/_llms-txt/core--how-to-guides.txt)
+- [Core > Reference](https://docs.defenseunicorns.com/_llms-txt/core--reference.txt)
+- [Core > Operations & Maintenance](https://docs.defenseunicorns.com/_llms-txt/core--operations--maintenance.txt)
+- [CLI > Getting Started](https://docs.defenseunicorns.com/_llms-txt/cli--getting-started.txt)
+- [CLI > How-to Guides](https://docs.defenseunicorns.com/_llms-txt/cli--how-to-guides.txt)
+- [CLI > Reference](https://docs.defenseunicorns.com/_llms-txt/cli--reference.txt)
+
+## Notes
+
+- The complete documentation includes all content from the official documentation
+- The content is automatically generated from the same source as the official documentation
+
+## Optional
+
+- [Core (GitHub)](https://github.com/defenseunicorns/uds-core)
+- [CLI (GitHub)](https://github.com/defenseunicorns/uds-cli)
+- [Zarf Docs](https://docs.zarf.dev/)

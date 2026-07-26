@@ -1,0 +1,47 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.defenseunicorns.com/ (UDS CLI Reference), github.com/defenseunicorns/uds-cli, Homebrew tap
+notes: >-
+  Defense Unicorns' primary developer surface is command-line tooling. The
+  flagship is the UDS CLI (`uds`), which wraps Zarf to build and deploy multi-package
+  UDS Bundles. Sibling first-party CLIs: Lula (compliance-as-code) and Maru (task runner).
+clis:
+  - name: UDS CLI
+    binary: uds
+    repository: https://github.com/defenseunicorns/uds-cli
+    docs: https://docs.defenseunicorns.com/cli/
+    language: go
+    description: >-
+      Create and deploy UDS Bundles — multi-package deployments defined in
+      uds-bundle.yaml. Wraps Zarf, adds a task runner (`uds run`) and cluster monitoring.
+    install:
+      - brew install defenseunicorns/tap/uds
+      - go install github.com/defenseunicorns/uds-cli@latest
+      - "GitHub Action: defenseunicorns/setup-uds@v1"
+    command_groups:
+      - group: bundle
+        commands: [create, deploy, inspect, remove, publish, pull]
+        summary: Build, publish and deploy UDS Bundles.
+      - group: run
+        commands: [run]
+        summary: Run tasks defined in tasks.yaml (Maru task runner).
+      - group: zarf
+        commands: [zarf]
+        summary: Passthrough to the embedded Zarf CLI.
+      - group: monitor
+        commands: [monitor]
+        summary: Monitor Pepr and cluster activity.
+  - name: Lula
+    binary: lula
+    repository: https://github.com/defenseunicorns/lula
+    language: go
+    description: Manage compliance-as-code (OSCAL) validations in Git repositories.
+    install:
+      - brew install defenseunicorns/tap/lula
+  - name: Maru
+    binary: maru2
+    repository: https://github.com/defenseunicorns/maru2
+    language: go
+    description: A simple, portable task runner used across UDS tooling.
+    install:
+      - brew install defenseunicorns/tap/maru2

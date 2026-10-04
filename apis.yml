@@ -51,7 +51,7 @@ tags:
 - Defense
 - Software Delivery
 - Compliance
-- Open-Source
+- Open Source
 - Air Gap
 tags_raw:
 - Company
@@ -63,6 +63,7 @@ tags_raw:
 - Compliance
 - Open Source
 - Air Gap
+- Open-Source
 apis: []
 maintainers:
 - FN: Kin Lane
